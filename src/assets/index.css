@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*theme array*/
+:root{
+    --var--bodycolor:#111111;
+    --var--btncolor:rgba(34, 34, 34, 0.3);
+    --var--textcolor:white;
+    --var--secondarycolor: rgba(255,255,255,0.4);
+    --var--bgsearch: white;
+    --var--standartcolor:white;
+    --var--searchsvgcolor:rgba(34, 34, 34, 1);
+}
+[light]{
+    --var--bodycolor:#FFFFFF;
+    --var--btncolor:#111111;
+    --var--textcolor:black;
+    --var--secondarycolor: rgba(1,1,1,0.4);
+    --var--bgsearch: #F8F8D9;
+    --var--standartcolor:black;
+    --var--searchsvgcolor:#111111;
+}
+[violet]{
+    --var--bodycolor:#401C56;
+    --var--btncolor:rgba(87, 0, 81, 0.4);
+    --var--textcolor:white;
+    --var--secondarycolor: rgba(255,255,255,0.4);
+    --var--bgsearch: white;
+    --var--standartcolor:white;
+    --var--searchsvgcolor:rgba(87, 0, 81, 1);
+}
+
+/*fonts*/
+
+@layer base {
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 400;
+        src: url(./Montserrat/Montserrat-Regular.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        src: url(./Montserrat/Montserrat-Medium.ttf) format('ttf');
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        src: url(./Montserrat/Montserrat-SemiBold.ttf) format('ttf');
+    }
+}
+
+/**{*/
+/*    font-family: 'Montserrat';*/
+/*}*/
+
+
+/*style*/
+
+body, .fon{
+    transition: 0.3s ease-in-out;
+    background:var(--var--bodycolor);
+}
+
+.container{
+    max-width: 1700px;
+    padding: 0px 20px;
+    margin: 0 auto;
+}
+
+.text-theme{
+    color: var(--var--textcolor);
+}
+
+.logo_theme{
+    fill: var(--var--standartcolor);
+}
+
+/*input*/
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+}
+
+/*input{*/
+/*    outline:none;*/
+/*}*/
+
+input:focus{
+    outline: none;
+}
+
+.auth_input {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: var(--var--standartcolor);
+    border: 1px solid var(--var--standartcolor);
+    background:0;
+    border-radius:3px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.auth_input:focus{
+    border: 1px solid #FFB03A;
+}
+
+.auth_input::placeholder{
+    color: var(--var--standartcolor);
+}
+
+.underline_anim::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFB03A; /* Цвет подчеркивания */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.underline_anim:hover::after {
+    opacity: 1;
+}
+
+.underline_animWhite::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--var--textcolor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.underline_animWhite:hover::after {
+    opacity: 1;
+}
