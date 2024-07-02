@@ -1,28 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import {onMounted, ref} from "vue";
+import {RouterLink, RouterView, useRoute} from 'vue-router'
+import {onMounted, ref, computed} from "vue";
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Aside from "@/components/Aside.vue";
+import MainView from "@/views/MainView.vue";
+import BreadCrumb from "@/components/BreadCrumb.vue";
 
-let thisTheme = '';
-const auth = ref(false);
 
-const toggleTheme = (event) => {
-  localStorage.setItem('theme', event.target.value);
-  setTheme()
-}
+const auth = ref(true);
 
-const setTheme = () => {
-  document.body.removeAttribute('light');
-  document.body.removeAttribute('dark');
-  document.body.removeAttribute('violet');
-  document.body.setAttribute(localStorage.getItem('theme'), '');
-}
-
-onMounted(() => {
-  setTheme()
-  thisTheme = localStorage.getItem('theme');
-});
+const route = useRoute();
+const path = computed(() => route.path);
 
 </script>
 
@@ -33,14 +22,18 @@ onMounted(() => {
     </div>
   </div>
   <div class="container">
-    <RouterView />
-        <select @change="toggleTheme">
-          <option value="violet" :selected="thisTheme === 'violet' ? true : false">Фиолетовая</option>
-          <option value="dark" :selected="thisTheme === 'dark' ? true : false">Темная</option>
-          <option value="light" :selected="thisTheme === 'light' ? true : false">Светлая</option>
-        </select>
+    <BreadCrumb :path="path" v-if="path !== '/'" />
+
+    <div class="grid grid-cols-6 pt-5 gap-5">
+      <Aside :auth="auth" />
+
+      <main class="col-span-5">
+        <MainView />
+      </main>
+    </div>
   </div>
-  <div class="footer_container">
+
+  <div class="footer_container mt-7">
     <div class="container">
       <Footer :auth="auth" />
     </div>
@@ -51,11 +44,11 @@ onMounted(() => {
 <style scoped>
   .header_container{
     padding: 25px 0px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid var(--var--linecolor);
   }
 
   .footer_container {
     padding: 25px 0px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid var(--var--linecolor);
   }
 </style>

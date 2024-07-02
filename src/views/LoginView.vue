@@ -1,12 +1,12 @@
 <script setup>
 
-import HeaderAbsolute from "@/components/HeaderAbsolute.vue";
-import Button from "@/components/UI components/Button.vue";
-import router from "@/router/index.js";
+  import HeaderAbsolute from "@/components/HeaderAbsolute.vue";
+  import Button from "@/components/UI components/Button.vue";
+
 </script>
 
 <template>
-  <div class="z-10 absolute left-0 top-0 full w-full h-full fon">
+  <div class="z-10 fixed left-0 top-0 full w-full h-full fon">
     <div class="container">
       <HeaderAbsolute />
 

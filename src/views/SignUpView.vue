@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <div class="z-10 absolute left-0 top-0 full w-full h-full fon">
+  <div class="z-10 fixed left-0 top-0 full w-full h-full fon">
     <div class="container">
       <HeaderAbsolute />
 

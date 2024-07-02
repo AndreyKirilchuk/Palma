@@ -32,6 +32,11 @@ const router = createRouter({
       path: '/renamepass',
       name: 'renamepass',
       component: () => import('../views/RenamePassView.vue')
+    },
+    {
+      path: '/addpost',
+      name: 'addpost',
+      component: () => import('../views/AddPostView.vue')
     }
   ]
 })
