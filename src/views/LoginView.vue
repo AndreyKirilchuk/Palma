@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .thistext{
     color: var(--var--secondarycolor);
   }
@@ -54,4 +54,5 @@
     flex-direction: column;
     margin: 0 auto;
   }
+
 </style>

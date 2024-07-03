@@ -9,13 +9,13 @@ defineProps({
 </script>
 
 <template>
-  <aside class="col-span-1 px-3.5 pt-3.5">
-    <div class="m-auto flex flex-col">
+  <aside class="col-span-1 px-3.5 pt-3.5 h-fit">
+    <div class="m-auto flex flex-col h-fit">
       <RouterLink  :to="auth ? '/addpost' : '/login'">
         <Button class="w-full" text="Создать пост"/>
       </RouterLink>
 
-      <div class="text-theme font-medium" v-for="item in 3">
+      <div class="border_custom_container text-theme font-medium" v-for="item in 3">
         <div class="text-xl pt-5">Интересное</div>
 
         <div class="border_custom flex flex-col gap-3.5 py-5">
@@ -69,10 +69,14 @@ defineProps({
   }
 
   .border_custom{
-    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    border-bottom: 0.5px solid var(--var--linecolor);
   }
 
   aside{
     background:var(--var--bgpanelcolor);
+  }
+
+  .border_custom_container:last-child div{
+    border-bottom: 0;
   }
 </style>

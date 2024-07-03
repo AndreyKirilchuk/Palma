@@ -93,7 +93,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .thistext{
   color: var(--var--secondarycolor);
 }

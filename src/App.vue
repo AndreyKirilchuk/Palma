@@ -1,17 +1,18 @@
 <script setup>
 import {RouterLink, RouterView, useRoute} from 'vue-router'
-import {onMounted, ref, computed} from "vue";
+import {onMounted, ref, computed, onBeforeUnmount} from "vue";
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Aside from "@/components/Aside.vue";
-import MainView from "@/views/MainView.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
 
 
-const auth = ref(true);
+const auth = ref(false);
 
 const route = useRoute();
 const path = computed(() => route.path);
+
+const bodyRef = ref(null);
 
 </script>
 
@@ -28,7 +29,7 @@ const path = computed(() => route.path);
       <Aside :auth="auth" />
 
       <main class="col-span-5">
-        <MainView />
+        <RouterView />
       </main>
     </div>
   </div>

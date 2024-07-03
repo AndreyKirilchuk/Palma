@@ -1,7 +1,7 @@
 <script setup>
 
-  import Aside from "@/components/Aside.vue";
   import {onMounted} from "vue";
+  import PostList from "@/components/PostList.vue";
 
   let thisTheme = '';
   const toggleTheme = (event) => {
@@ -23,7 +23,7 @@
 </script>
 
 <template>
-
+  <PostList />
     <div class="">
       <select @change="toggleTheme">
         <option value="violet" :selected="thisTheme === 'violet' ? true : false">Фиолетовая</option>

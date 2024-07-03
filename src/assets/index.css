@@ -5,7 +5,8 @@
 /*custom scrollbar*/
 
     body::-webkit-scrollbar{
-        width:5px;
+        width:6px;
+        background-color:var(--var--scrollbarcolor);
     }
 
     body::-webkit-scrollbar-thumb{
@@ -24,6 +25,7 @@
         --var--searchsvgcolor:rgba(34, 34, 34, 1);
         --var--bgpanelcolor:#111111;
         --var--linecolor:rgba(255,255,255,0.1);
+        --var--scrollbarcolor:rgba(255,255,255,0.1);
     }
     [light]{
         --var--bodycolor:#FFFFFF;
@@ -35,6 +37,7 @@
         --var--searchsvgcolor:#111111;
         --var--bgpanelcolor:#F8F8D9;
         --var--linecolor:rgba(1,1,1,0.1);
+        --var--scrollbarcolor:rgba(255,176,58,0.4);
     }
     [violet]{
         --var--bodycolor:#401C56;
@@ -46,6 +49,7 @@
         --var--searchsvgcolor:rgba(87, 0, 81, 1);
         --var--bgpanelcolor: rgba(152, 39, 145, 0.3);
         --var--linecolor:rgba(255,255,255,0.1);
+        --var--scrollbarcolor:rgba(255,255,255,0.1);
     }
 
 /*fonts*/
