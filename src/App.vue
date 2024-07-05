@@ -31,7 +31,7 @@ const showFullMain = computed(() => {
     <BreadCrumb :path="path" v-if="path !== '/' && path !== '/search'" />
     <SearchCrumb v-if="path === '/search'"/>
     <div class="grid grid-cols-6 pt-5 gap-5">
-      <Aside :auth="auth" v-if="path !== '/addpost' && path !== '/profile/settings' " />
+      <Aside :auth="auth" v-if="path !== '/addpost' && path !== '/profile/settings'"/>
 
       <main :class="{ 'col-span-6': showFullMain, 'col-span-5': !showFullMain }" >
         <RouterView />

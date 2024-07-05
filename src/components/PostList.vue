@@ -11,7 +11,7 @@
       <div class="flex gap-5 items-center">
         <img src="/avatar.png" alt="" class="w-14">
         <div class="text-theme">
-          <h4 class="text-xl font-medium">Ищу графического дизайнера</h4>
+          <RouterLink to="/post"><h4 class="text-xl font-medium hover:text-primary transition duration-200">Ищу графического дизайнера</h4></RouterLink>
           <div class="flex gap-x-2.5">
             <span>Иванов иван</span> <span>Сегодня в 15:04</span>  <div class="flex gap-x-1"> <img src="/eye.svg" alt=""> <span>34</span> </div> <div class="flex gap-x-1"> <img src="/message.svg" alt=""> <span>2</span> </div>
           </div>
@@ -41,6 +41,5 @@
   .post_list_container{
     background: var(--var--bgpanelcolor);
   }
-
 
 </style>

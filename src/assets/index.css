@@ -176,3 +176,17 @@
     .underline_animWhite:hover::after {
         opacity: 1;
     }
+
+    *{
+        letter-spacing: 0.025rem;
+    }
+
+    .form_input{
+        border: 1px solid var(--var--textcolor);
+        border-radius: 3px;
+        padding:6px 12px;
+        color: var(--var--textcolor);
+        background:var(--var--bodycolor);
+        outline: none;
+        font-size:16px;
+    }

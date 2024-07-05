@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="tracking-wide pt-5 text-xl">
+  <div class="tracking-wide pt-5 text-xl flex items-center">
 
     <!-- main page-->
     <div class="relative">
@@ -44,6 +44,14 @@
       </span>
     </div>
 
+<!--    post page-->
+
+    <div v-if="path === '/post'">
+      <span class="text">
+          Ищу графического дизайнера
+      </span>
+    </div>
+
 
   </div>
 
@@ -66,6 +74,10 @@
 
     .text{
       color:#FFB03A;
+    }
+
+    span{
+      font-size: 20px;
     }
 
 </style>
