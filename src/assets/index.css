@@ -27,6 +27,8 @@
         --var--linecolor:rgba(255,255,255,0.1);
         --var--scrollbarcolor:rgba(255,255,255,0.1);
         --var--borederlikecolor:rgba(34,34,34,0.05);
+        --var--bgtogglebuttoncolor:#222222;
+        --var--texttogglebuttoncolor:#111111;
     }
     [light]{
         --var--bodycolor:#FFFFFF;
@@ -40,6 +42,8 @@
         --var--linecolor:rgba(1,1,1,0.1);
         --var--scrollbarcolor:rgba(255,176,58,0.4);
         --var--borederlikecolor:rgba(17,17,17,0.05);
+        --var--bgtogglebuttoncolor:#F8F8D9;
+        --var--texttogglebuttoncolor:#F8F8D9;
     }
     [violet]{
         --var--bodycolor:#401C56;
@@ -53,6 +57,8 @@
         --var--linecolor:rgba(255,255,255,0.1);
         --var--scrollbarcolor:rgba(255,255,255,0.1);
         --var--borederlikecolor:rgba(87, 0, 81, 0.05);
+        --var--bgtogglebuttoncolor:rgba(152, 39, 145, 0.3);
+        --var--texttogglebuttoncolor:#982791;
     }
 
 /*fonts*/

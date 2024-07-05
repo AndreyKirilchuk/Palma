@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="pt-5 text-xl">
+  <div class="tracking-wide pt-5 text-xl">
 
     <!-- main page-->
     <div class="relative">
@@ -46,6 +46,7 @@
 
 
   </div>
+
 </template>
 
 <style scoped>
@@ -66,4 +67,5 @@
     .text{
       color:#FFB03A;
     }
+
 </style>
