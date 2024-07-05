@@ -26,6 +26,7 @@
         --var--bgpanelcolor:#111111;
         --var--linecolor:rgba(255,255,255,0.1);
         --var--scrollbarcolor:rgba(255,255,255,0.1);
+        --var--borederlikecolor:rgba(34,34,34,0.05);
     }
     [light]{
         --var--bodycolor:#FFFFFF;
@@ -38,10 +39,11 @@
         --var--bgpanelcolor:#F8F8D9;
         --var--linecolor:rgba(1,1,1,0.1);
         --var--scrollbarcolor:rgba(255,176,58,0.4);
+        --var--borederlikecolor:rgba(17,17,17,0.05);
     }
     [violet]{
         --var--bodycolor:#401C56;
-        --var--btncolor:rgba(87, 0, 81, 0.4);
+        --var--btncolor:rgba(87, 0, 81, 0.3);
         --var--textcolor:white;
         --var--secondarycolor: rgba(255,255,255,0.4);
         --var--bgsearch: white;
@@ -50,6 +52,7 @@
         --var--bgpanelcolor: rgba(152, 39, 145, 0.3);
         --var--linecolor:rgba(255,255,255,0.1);
         --var--scrollbarcolor:rgba(255,255,255,0.1);
+        --var--borederlikecolor:rgba(87, 0, 81, 0.05);
     }
 
 /*fonts*/

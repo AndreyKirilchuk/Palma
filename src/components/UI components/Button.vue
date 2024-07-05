@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <button class="bg-primary py-2 px-7 rounded-sm text-xl">
+  <button class="bg-primary py-2 px-7 text-xl">
     {{ text }}
   </button>
 </template>
@@ -14,6 +14,7 @@
   button{
     color: var(--var--btncolor);
     transition: 0.3s ease-in-out;
+    border-radius: 3px;
   }
 
   button:hover{

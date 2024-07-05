@@ -32,6 +32,7 @@
       </div>
     </div>
 
+<!--    if no auth-->
     <div class="flex justify-between items-center gap-5 font-medium" v-if="!auth">
       <div class="relative">
         <RouterLink to="signup" class="underline_animWhite text-theme transition duration-200 text-xl">
@@ -44,6 +45,7 @@
       </RouterLink>
     </div>
 
+<!--    if auth-->
     <div class="flex justify-between items-center gap-5 text-xl font-medium text-white" v-if="auth">
 
       <RouterLink to="/profile" class="avatar-name text-theme hover:text-primary transition duration-200">
@@ -51,7 +53,7 @@
       </RouterLink>
 
       <RouterLink to="/profile">
-        <img src="/avatar.png" alt="">
+        <img src="/avatar.png" alt="" class="w-14">
       </RouterLink>
     </div>
   </header>

@@ -7,7 +7,7 @@ import Aside from "@/components/Aside.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
 
 
-const auth = ref(false);
+const auth = ref(true);
 
 const route = useRoute();
 const path = computed(() => route.path);
