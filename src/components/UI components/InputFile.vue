@@ -1,12 +1,14 @@
 <script setup>
-
+  defineProps({
+    text: String,
+  })
 </script>
 
 <template>
   <div class="relative">
     <input type="file" name="fileInput" id="fileInput" hidden/>
     <label for="fileInput" class="custom-file-upload__button">
-      Прикрепите файл
+      {{ text }}
     </label>
   </div>
 
@@ -16,11 +18,11 @@
   .custom-file-upload__button{
     position: absolute;
     left: 0;
-    background: var(--var--bgtogglebuttoncolor);
+    background: var(--var--filecolor);
     width: 225px;
     height: 100%;
     text-align: center;
-    color: var(--var--textcolor);
+    color: white;
     font-weight: 500;
     align-content: center;
     border-radius: 3px;

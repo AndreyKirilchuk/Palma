@@ -1,6 +1,6 @@
 <script setup>
-import {RouterLink, RouterView, useRoute} from 'vue-router'
-import { ref, computed } from "vue";
+import {RouterView, useRoute} from 'vue-router'
+import {ref, computed, watch, provide, onMounted} from "vue";
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Aside from "@/components/Aside.vue";
@@ -13,11 +13,45 @@ const auth = ref(true);
 const route = useRoute();
 const path = computed(() => route.path);
 
-const bodyRef = ref(null);
+// const bodyRef = ref(null);
 
 const showFullMain = computed(() => {
   return path.value === '/addpost' || path.value === '/profile/settings';
 });
+
+const body = ref(document.body);
+
+watch(path, (newPath) => {
+  if (
+      newPath === '/login' ||
+      newPath === '/signup' ||
+      newPath === '/renamepass' ||
+      newPath === '/recover'
+  ) {
+    body.value.classList.add('active');
+  } else {
+    body.value.classList.remove('active');
+  }
+});
+
+  // toggleTheme
+  const toggleTheme = (event) => {
+    localStorage.setItem('theme', event.target.value);
+    setTheme()
+  }
+
+  const setTheme = () => {
+    document.body.removeAttribute('light');
+    document.body.removeAttribute('dark');
+    document.body.removeAttribute('violet');
+    document.body.setAttribute(localStorage.getItem('theme'), '');
+  }
+
+  onMounted(() => {
+    setTheme()
+  });
+
+  provide('toggleTheme', toggleTheme)
 
 </script>
 

@@ -1,32 +1,55 @@
 <script setup>
+  import {reactive} from "vue";
 
+  import Post from "@/components/Post.vue";
+
+  const items = reactive([
+    {
+      id: 1,
+      title: "Заголовок статьи 1",
+      imageUrl: "/avatar.png",
+      author: "Автор 1",
+      date: "2023-10-26",
+      views: 1234,
+      comments: 5
+    },
+    {
+      id: 2,
+      title: "Заголовок статьи 2",
+      imageUrl: "/avatar.png",
+      author: "Автор 2",
+      date: "2023-10-25",
+      views: 5678,
+      comments: 10
+    },
+    {
+      id: 3,
+      title: "Заголовок статьи 3",
+      imageUrl: "/avatar.png",
+      author: "Автор 3",
+      date: "2023-10-24",
+      views: 9012,
+      comments: 15
+    }
+  ]);
 </script>
 
 <template>
   <!--  container_list-->
-  <div class="post_list_container w-full flex flex-col">
-    <!--    post-->
-    <div class="flex justify-between items-center py-5 px-7 border-b border_custom" v-for="item in 12">
-      <!--      left post-->
-      <div class="flex gap-5 items-center">
-        <img src="/avatar.png" alt="" class="w-14">
-        <div class="text-theme">
-          <RouterLink to="/post"><h4 class="text-xl font-medium hover:text-primary transition duration-200">Ищу графического дизайнера</h4></RouterLink>
-          <div class="flex gap-x-2.5">
-            <span>Иванов иван</span> <span>Сегодня в 15:04</span>  <div class="flex gap-x-1"> <img src="/eye.svg" alt=""> <span>34</span> </div> <div class="flex gap-x-1"> <img src="/message.svg" alt=""> <span>2</span> </div>
-          </div>
-        </div>
-      </div>
-      <!--      right post-->
-      <div>
-      фывфыв
-      </div>
-    </div>
+  <div class="post_list_container w-full flex flex-col" v-auto-animate>
+    <Post
+        v-for="item in items"
+        :key="item.id"
+        :id="item.id"
+        :title="item.title"
+        :imageUrl="item.imageUrl"
+        :author="item.author"
+        :date="item.date"
+        :views="item.views"
+        :comments="item.comments"
+    />
   </div>
 
-  <div>
-
-  </div>
 </template>
 
 <style scoped>

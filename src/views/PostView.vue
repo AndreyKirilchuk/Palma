@@ -59,7 +59,7 @@ import CommentList from "@/components/CommentList.vue";
     <div class="flex gap-5">
       <Button text="Опубликовать" class="text-xl"/>
 
-      <InputFile/>
+      <InputFile text="Прикрепить файл"/>
     </div>
   </form>
 

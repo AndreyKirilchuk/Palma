@@ -33,7 +33,7 @@ import InputFile from "@/components/UI components/InputFile.vue";
       <div class="col-span-6 flex gap-5">
         <Button text="Опубликовать" class="text-xl"/>
 
-        <InputFile/>
+        <InputFile text="Прикрепить файл"/>
       </div>
     </div>
 
