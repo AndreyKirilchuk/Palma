@@ -1,9 +1,10 @@
 <script setup>
   import { inject } from "vue";
 
-  const { burger, closeBurger} = inject("burger")
+  const { closeBurger} = inject("burger")
 
   import Aside from './Aside.vue';
+  import Search from "@/components/UI components/Search.vue";
 
   defineProps({
     burgerActive: Boolean
@@ -12,6 +13,7 @@
 
 <template>
   <div class="burger_fon" @click="closeBurger" v-if="burgerActive"/>
+
 
   <div class="burger" :class="{'active': burgerActive}">
     <Aside/>

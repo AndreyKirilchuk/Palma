@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <footer class="flex justify-between items-center">
+  <footer class="flex gap-5 justify-between items-center">
     <div>
       <RouterLink to="/">
         <svg class="logo_anim hidden sm:block" width="138" height="40" viewBox="0 0 138 40" fill="none" xmlns="http://www.w3.org/2000/svg">

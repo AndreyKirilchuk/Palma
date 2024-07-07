@@ -192,6 +192,8 @@
 
     *{
         letter-spacing: 0.025rem;
+        word-break: break-all;
+        flex-wrap: wrap;
     }
 
     .form_input{
