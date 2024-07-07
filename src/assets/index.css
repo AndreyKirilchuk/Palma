@@ -35,7 +35,7 @@
         --var--texttogglebuttoncolor:#111111;
         --var--modalcolor:#222222;
         --var--filecolor:rgba(17,17,17,0.3);
-        --var--burgercolor:#222222;
+        --var--burgercolor:white;
     }
     [light]{
         --var--bodycolor:#FFFFFF;
@@ -53,7 +53,7 @@
         --var--texttogglebuttoncolor:#F8F8D9;
         --var--modalcolor:#F8F8D9;
         --var--filecolor:rgba(17,17,17,1);
-        --var--burgercolor:#F8F8D9;
+        --var--burgercolor:#111111;
     }
     [violet]{
         --var--bodycolor:#401C56;
@@ -71,7 +71,7 @@
         --var--texttogglebuttoncolor:#982791;
         --var--modalcolor:#5A1F68;
         --var--filecolor:rgba(87,0,81,0.3);
-        --var--burgercolor:#401C56;
+        --var--burgercolor:white;
     }
 
 /*fonts*/

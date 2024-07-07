@@ -16,7 +16,7 @@
     <div class="tracking-wide bg_panel mb-5">
       <img src="/profile_header.png" alt="">
 
-      <div class="border_custom grid gap-y-5 grid-cols-1 lg:grid-cols-3 xl:grid-cols-2 px-7 py-5">
+      <div class="border_custom grid gap-y-5 grid-cols-1 lg:grid-cols-3 xl:grid-cols-2 px-5 sm:px-7 py-5">
 
         <div class="flex items-center gap-x-5">
 <!--          avatar-->
@@ -44,7 +44,7 @@
       </div>
 
 
-      <div class="flex justify-between sm:grid-cols-2  gap-5 items-center px-7 py-5">
+      <div class="flex justify-between sm:grid-cols-2  gap-5 items-center px-5 sm:px-7 py-5">
         <!--       mobile profile_settings link ( if auth )    -->
         <RouterLink to="/profile/settings" v-if="1 === 1" class="block sm:hidden">
           <Button text="Редактировать" class="max-w-52 px-5 py-1.5" />

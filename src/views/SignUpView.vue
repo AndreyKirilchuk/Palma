@@ -66,7 +66,7 @@
             отравлено на почту
           </div>
 
-          <div class="py-2.5 w-full text-xl text-center">
+          <div class="py-2.5 w-full flex justify-center text-base sm:text-xl text-center">
             <div>
               <span class="thistext">Не пришло письмо?</span> <span class="thistext mx-2 underline hover:opacity-90 transition cursor-pointer" @click="toggleMessage" >Отправить повторно</span>
             </div>

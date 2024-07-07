@@ -39,12 +39,13 @@
     left: 0;
     transform: translateX(-100%);
     width: 260px;
-    background: var(--var--burgercolor);
+    background: var(--var--bodycolor);
     transition: 0.3s ease-in-out;
     height: 100%;
     z-index: 500;
     border-right: 1px solid var(--var--linecolor);
     padding: 25px 15px 0px ;
+    overflow-y:scroll;
   }
 
   .burger.active{

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="bg_panel p-7  text-lg sm:text-xl about_profile h-fit tracking-wide">
+  <div class="bg_panel p-5 sm:p-7  text-lg sm:text-xl about_profile h-fit tracking-wide">
     <p>О себе</p>
     <span>Креативный директор диджитал агенства W. Ищу команду и крутые идеи  </span>
     <p>Телефон</p>

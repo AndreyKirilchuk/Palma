@@ -70,9 +70,12 @@
     transform: translate(-50%, -50%);
   }
 
-  @media(min-width: 768px){
+  @media(max-width: 768px){
     input[type=checkbox]::after {
-      background-color: var(--var--bgpanelcolor);
+      background-color: var(--var--bodycolor);
+    }
+    input[type=checbox]::before{
+      background-color: var(--var--bodycolor);
     }
   }
 

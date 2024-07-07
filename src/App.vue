@@ -54,10 +54,12 @@ watch(path, (newPath) => {
 
   const openBurger = () => {
     burgerActive.value = true
+    body.value.classList.add('active')
   }
 
   const closeBurger = () => {
     burgerActive.value = false
+    body.value.classList.remove('active')
   }
 
   const toggleAuth = () => {
@@ -70,6 +72,7 @@ watch(path, (newPath) => {
     openBurger,
     closeBurger
   });
+
 
 </script>
 
