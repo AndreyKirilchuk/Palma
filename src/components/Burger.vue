@@ -7,7 +7,8 @@
   import Search from "@/components/UI components/Search.vue";
 
   defineProps({
-    burgerActive: Boolean
+    burgerActive: Boolean,
+    auth: Boolean
   })
 </script>
 
@@ -16,7 +17,7 @@
 
 
   <div class="burger" :class="{'active': burgerActive}">
-    <Aside/>
+    <Aside :auth="auth" />
   </div>
 
 </template>

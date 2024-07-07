@@ -19,15 +19,21 @@
     position: absolute;
     left: 0;
     background: var(--var--filecolor);
-    width: 225px;
+    width: 100% ;
     height: 100%;
     text-align: center;
     color: white;
     font-weight: 500;
     align-content: center;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+  }
+
+  @media (min-width: 640px) {
+    .custom-file-upload__button{
+      font-size: 20px;
+    }
   }
 </style>

@@ -211,7 +211,7 @@
     }
 
 @media (max-width: 480px) {
-    input{
-        height: 30px;
+    .form_input, .auth_input{
+        height: 40px;
     }
 }

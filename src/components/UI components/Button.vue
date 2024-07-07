@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <button class="bg-primary py-1.5 sm:py-2 px-5 2xl:px-7 text-base sm:text-xl">
+  <button class="bg-primary py-1.5 sm:py-2 px-4.5 2xl:px-7 text-lg sm:text-xl">
     {{ text }}
   </button>
 </template>

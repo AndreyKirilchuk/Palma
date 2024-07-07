@@ -5,19 +5,19 @@
 <template>
   <div class="сomment_list_container w-full flex flex-col">
     <!--    comment-->
-    <div class="flex justify-between items-center py-5 px-7 border-b border_custom" v-for="item in 12">
+    <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-6 justify-between items-center py-5 px-7 border-b border_custom" v-for="item in 12">
       <!--      left comment-->
-      <div class="flex gap-5 items-center">
+      <div class="flex sm:flex-nowrap col-span-5 gap-5 items-center">
         <img src="/avatar.png" alt="" class="w-14">
         <div class="text-theme">
-          <h4 class="text-xl font-medium">Привет! Я графический дизайнер с большим опытом, посмотри профиль, там есть контакты и мои работы</h4>
+          <h4 class="text-base lg:text-xl font-medium">Привет! Я графический дизайнер с большим опытом, посмотри профиль, там есть контакты и мои работы</h4>
           <div class="flex gap-x-2.5">
-            <span>Иванов иван</span> <span>Сегодня в 15:04</span>  <div class="flex gap-x-1"> <img src="/eye.svg" alt=""> <span>34</span> </div> <div class="flex gap-x-1"> <img src="/message.svg" alt=""> <span>2</span> </div>
+            <span class="m">Иван иванов</span> <span>22-12-2023</span>  <div class="flex gap-x-1"> <img src="/eye.svg" alt=""> <span>12</span> </div> <div class="flex gap-x-1"> <img src="/message.svg" alt=""> <span> 12</span> </div>
           </div>
         </div>
       </div>
       <!--      right comment -->
-      <div class="text-xl text-secondary cursor-pointer">
+      <div class="text-lg text-right lg:text-xl text-secondary cursor-pointer">
         <RouterLink to="/post">
           Ответить
         </RouterLink>
