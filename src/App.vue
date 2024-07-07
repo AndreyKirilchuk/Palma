@@ -6,12 +6,14 @@ import Footer from './components/Footer.vue'
 import Aside from "@/components/Aside.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
 import SearchCrumb from "@/components/SearchCrumb.vue";
+import Burger from "@/components/Burger.vue";
 
 
-const auth = ref(true);
+const auth = ref(false);
 
 const route = useRoute();
 const path = computed(() => route.path);
+const burgerActive = ref(false);
 
 // const bodyRef = ref(null);
 
@@ -51,11 +53,26 @@ watch(path, (newPath) => {
     setTheme()
   });
 
-  provide('toggleTheme', toggleTheme)
+  const openBurger = () => {
+    burgerActive.value = true
+  }
+
+  const closeBurger = () => {
+    burgerActive.value = false
+  }
+
+
+  provide('toggleTheme', toggleTheme);
+  provide('burger', {
+    openBurger,
+    closeBurger
+  });
 
 </script>
 
 <template>
+  <Burger :burgerActive="burgerActive" />
+
   <div class="header_container">
     <div class="container">
       <Header :auth="auth" />
@@ -64,10 +81,10 @@ watch(path, (newPath) => {
   <div class="container">
     <BreadCrumb :path="path" v-if="path !== '/' && path !== '/search'" />
     <SearchCrumb v-if="path === '/search'"/>
-    <div class="grid grid-cols-6 pt-5 gap-5">
-      <Aside :auth="auth" v-if="path !== '/addpost' && path !== '/profile/settings'"/>
+    <div class="grid grid-cols-4 md-grid-cols-5 lg:grid-cols-6 pt-5 gap-5">
+      <Aside :auth="auth" v-if="path !== '/addpost' && path !== '/profile/settings'" class="hidden md:block"/>
 
-      <main :class="{ 'col-span-6': showFullMain, 'col-span-5': !showFullMain }" >
+      <main :class="{'active': showFullMain}">
         <RouterView />
       </main>
     </div>
@@ -90,5 +107,27 @@ watch(path, (newPath) => {
   .footer_container {
     padding: 25px 0px;
     border-top: 1px solid var(--var--linecolor);
+  }
+
+  main{
+    grid-column: span 4;
+  }
+  
+  @media (min-width: 768px) {
+    main{
+      grid-column: span 3;
+    }
+    main.active{
+      grid-column: span 4;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    main{
+      grid-column: span 5;
+    }
+    main.active{
+      grid-column: span 6;
+    }
   }
 </style>

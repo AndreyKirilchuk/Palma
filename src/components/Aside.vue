@@ -9,10 +9,10 @@ defineProps({
 </script>
 
 <template>
-  <aside class="col-span-1 px-3.5 pt-3.5 h-fit">
+  <aside class="col-span-1  px-1 xl:px-3.5 pt-3.5 h-fit">
     <div class="m-auto flex flex-col h-fit">
       <RouterLink  :to="auth ? '/addpost' : '/login'">
-        <Button class="w-full" text="Создать пост"/>
+        <Button class="w-full px-0" text="Создать пост"/>
       </RouterLink>
 
       <div class="border_custom_container text-theme font-medium" v-for="item in 3">

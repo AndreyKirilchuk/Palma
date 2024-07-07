@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <button class="bg-primary py-2 px-7 text-xl">
+  <button class="bg-primary py-2 px-5 2xl:px-7 text-lg lg:text-xl">
     {{ text }}
   </button>
 </template>
@@ -20,4 +20,5 @@
   button:hover{
     background:rgba(255,176,58,0.85);
   }
+
 </style>
