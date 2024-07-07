@@ -18,8 +18,8 @@ const closeModal = inject("closeModal")
   <div class="modal" @click="closeModal" />
 
   <form class="modal_inner">
-    <div class="mb-5 flex justify-between items-center">
-      <div class="modal_title">
+    <div class="mb-5 flex flex-nowrap justify-between items-center">
+      <div class="modal_title font-medium text-base sm:text-2xl">
         Изменить
         <span v-if="modalName">имя</span>
         <span v-if="modalEmail">адрес электронной почты</span>
@@ -33,26 +33,26 @@ const closeModal = inject("closeModal")
 
     </div>
 
-    <div class="mb-7 text-xl h-10 flex gap-x-6 items-center text-theme" v-if="modalAvatar || modalObloshka" >
-      Добавьте новый файл<InputFile class="h-12" text="Выбрать файл"  />
+    <div class="text-base flex-nowrap sm:text-xl h-10 flex gap-5 gap-x-6 items-center text-theme" v-if="modalAvatar || modalObloshka" >
+      Добавьте новый файл<InputFile class="h-full w-56" text="Выбрать файл" />
     </div>
 
 
-    <div v-if="modalName" class="text-xl text-theme flex items-center gap-6 mb-7">
-     <div class="w-48 text-right">Новое имя:</div> <input type="text" name="name" class="form_input w-full">
+    <div v-if="modalName" class="text-base sm:text-xl text-theme modal_inputs items-center gap-4 mb-7">
+     <div class="lg:text-right">Новое имя:</div> <input type="text" name="name" class="form_input w-full">
     </div>
 
-    <div v-if="modalEmail" class="text-xl text-theme flex items-center gap-6 mb-7">
-      <div class="w-48 text-right">Новый e-mail:</div> <input type="email" name="email" class="form_input w-full">
+    <div v-if="modalEmail" class="text-base sm:text-xl text-theme modal_inputs items-center gap-4 mb-7">
+      <div class="lg:text-right">Новый e-mail:</div> <input type="email" name="email" class="form_input w-full">
     </div>
 
-    <div v-if="modalEmail" class="text-xl text-theme flex items-center gap-6 mb-7">
-      <div class="w-48 text-right">Пароль:</div> <input type="password" name="password" class="form_input w-full">
+    <div v-if="modalEmail" class="text-base sm:text-xl text-theme modal_inputs items-center gap-4 mb-7">
+      <div class="lg:text-right">Пароль:</div> <input type="password" name="password" class="form_input w-full">
     </div>
 
-    <Button text="Сохранить изменения" @click="closeModal" v-if="modalAvatar || modalObloshka"/>
+    <Button text="Сохранить изменения" @click="closeModal" v-if="modalAvatar || modalObloshka" class="w-full mt-5 px-5"/>
 
-    <Button text="Изменить" @click="closeModal" class="float-right" v-if="modalName || modalEmail"/>
+    <Button text="Изменить" @click="closeModal" class="float-right w-full px-5" v-if="modalName || modalEmail"/>
   </form>
 
 
@@ -74,21 +74,43 @@ const closeModal = inject("closeModal")
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width:800px;
-    width: 800px;
+    width:95%;
     background: var(--var--modalcolor);
     box-shadow: 0px 0px 30px 1200px rgba(3,3,3,0.5);
-    padding: 25px 30px;
+    padding: 15px 15px;
     border-radius: 4px;
   }
 
+
+
+  @media(min-width: 1024px){
+    .modal_inner{
+      max-width:800px;
+      width: 800px;
+    }
+  }
+
   .modal_title{
-    font-size: 24px;
-    font-weight: 500;
     color:var(--var--textcolor)
   }
 
   svg{
     cursor:pointer;
   }
+
+  .modal_inputs{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  @media(min-width: 1024px){
+    .modal_inputs{
+      grid-template-columns: repeat(5,1fr);
+    }
+
+    .modal_inputs input{
+      grid-column: span 4;
+    }
+  }
+
 </style>

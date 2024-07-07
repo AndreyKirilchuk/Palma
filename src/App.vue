@@ -7,6 +7,7 @@ import Aside from "@/components/Aside.vue";
 import BreadCrumb from "@/components/BreadCrumb.vue";
 import SearchCrumb from "@/components/SearchCrumb.vue";
 import Burger from "@/components/Burger.vue";
+import Button from "@/components/UI components/Button.vue";
 
 
 const auth = ref(true);
@@ -14,8 +15,6 @@ const auth = ref(true);
 const route = useRoute();
 const path = computed(() => route.path);
 const burgerActive = ref(false);
-
-// const bodyRef = ref(null);
 
 const showFullMain = computed(() => {
   return path.value === '/addpost' || path.value === '/profile/settings';
@@ -61,6 +60,10 @@ watch(path, (newPath) => {
     burgerActive.value = false
   }
 
+  const toggleAuth = () => {
+    auth.value = !auth.value
+  }
+
 
   provide('toggleTheme', toggleTheme);
   provide('burger', {
@@ -72,12 +75,12 @@ watch(path, (newPath) => {
 
 <template>
   <Burger :burgerActive="burgerActive" :auth="auth" />
-
   <div class="header_container">
     <div class="container">
       <Header :auth="auth" />
     </div>
   </div>
+
   <div class="container">
     <BreadCrumb :path="path" v-if="path !== '/' && path !== '/search'" />
     <SearchCrumb v-if="path === '/search'"/>
@@ -93,6 +96,7 @@ watch(path, (newPath) => {
   <div class="footer_container mt-7">
     <div class="container">
       <Footer :auth="auth" />
+      <Button @click="toggleAuth" text="Сменить" class="w-full"/>
     </div>
   </div>
 

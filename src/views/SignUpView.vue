@@ -28,9 +28,9 @@
       <HeaderAbsolute />
 
       <!--signForm-->
-      <div class="flex justify-center py-52">
+      <div class="flex justify-center py-20 sm:py-52">
         <div class="form_container" v-if="!message && !mail">
-          <div class="text-theme text-3xl font-medium text-center">
+          <div class="text-theme text-2xl sm:text-3xl font-medium text-center">
             Создайте аккаунт!
           </div>
 
@@ -42,9 +42,9 @@
             <Button text="Зарегестрироваться" />
           </form>
 
-          <div class="py-2.5 w-full text-xl text-center">
+          <div class="py-2.5 w-full flex justify-center text-base sm:text-xl text-center">
             <div class="flex">
-              <span class="text-theme ml-24">Уже есть аккаунт?</span>
+              <span class="text-theme">Уже есть аккаунт?</span>
               <div class="relative ml-5">
                 <RouterLink class="underline_anim text-primary  underline_anim" to="/login">
                   Войти
@@ -61,7 +61,7 @@
           </div>
 
 
-          <div class="text-theme text-2xl font-medium text-center pt-10">
+          <div class="text-theme text-xl sm:text-3xl font-medium text-center pt-10">
             Письмо с подтверждением было
             отравлено на почту
           </div>
@@ -79,7 +79,7 @@
           </div>
 
 
-          <div class="text-theme text-3xl font-medium text-center pt-10">
+          <div class="text-theme text-xl sm:text-3xl font-medium text-center pt-10">
             Почта была успешно подтверждена!
           </div>
 

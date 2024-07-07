@@ -49,7 +49,7 @@
       </div>
 
       <RouterLink to="/login">
-        <Button text="Вход" class="py-0.5 2xl:py-2 text-sm sm:px-5  md:px-3.5 lg:px-5"/>
+        <Button text="Вход" class="py-0.5 2xl:py-2 text-sm px-1 sm:px-5  md:px-3.5 lg:px-5"/>
       </RouterLink>
 
       <!--        burger-->

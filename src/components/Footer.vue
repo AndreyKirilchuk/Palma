@@ -30,7 +30,7 @@
       </RouterLink>
     </div>
 
-    <div class="footer-copyrait text-base">
+    <div class="footer-copyrait text-xs sm:text-base">
       © Все права защищены 2024
     </div>
 

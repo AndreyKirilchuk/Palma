@@ -17,9 +17,9 @@
     <div class="container">
       <HeaderAbsolute />
 
-      <div class="flex justify-center py-52">
+      <div class="flex justify-center py-20 sm:py-52">
         <div class="form_container" v-if="!toggleMenu">
-          <div class="text-theme text-3xl font-medium text-center">
+          <div class="text-theme text-2xl sm:text-3xl font-medium text-center">
             Введите ваш e-mail
           </div>
 
@@ -28,10 +28,10 @@
             <Button text="Далее" />
           </form>
 
-          <div class="py-2.5 w-full text-xl text-center">
+          <div class="py-2.5 w-full flex justify-center text-base sm:text-xl text-center">
             <div class="flex">
-              <span class="text-theme ml-10">Еще нет акаунта?</span>
-              <div class="relative ml-5">
+              <span class="text-theme">Еще нет акаунта?</span>
+              <div class="relative ml-2.5">
                 <RouterLink class="underline_anim text-primary  underline_anim" to="/signup">
                   Зарегистрироваться
                 </RouterLink>
@@ -46,8 +46,8 @@
             <img src="/mail.svg" alt="" class="m-auto">
           </div>
 
-          
-          <div class="text-theme text-2xl font-medium text-center pt-10">
+
+          <div class="text-theme text-xl sm:text-3xl font-medium text-center pt-10">
             Письмо для сброса пароля
             было отравлено на почту
           </div>
@@ -56,9 +56,9 @@
             <Button text="Войти в аккаунт" class="w-full" />
           </RouterLink>
 
-          <div class="py-2.5 w-full text-xl text-center">
+          <div class="py-2.5 w-full flex justify-center text-base sm:text-xl text-center">
             <div>
-              <span class="thistext">Не пришло письмо?</span> <span class="thistext mx-2 underline hover:opacity-90 transition cursor-pointer" @click="toggleRecover" >Отправить повторно</span>
+              <span class="thistext">Не пришло письмо?</span> <span class="thistext underline hover:opacity-90 transition cursor-pointer" @click="toggleRecover" >Отправить повторно</span>
             </div>
           </div>
 

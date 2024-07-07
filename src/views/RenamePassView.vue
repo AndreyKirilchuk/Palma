@@ -17,7 +17,7 @@
     <div class="container">
       <HeaderAbsolute />
 
-      <div class="flex justify-center py-52">
+      <div class="flex justify-center py-20 sm:py-52">
         <div class="form_container" v-if="!passAccept">
           <div class="pb-9">
             <svg class="m-auto" width="138" height="40" viewBox="0 0 138 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
             </svg>
           </div>
 
-          <div class="text-theme text-3xl font-medium text-center">
+          <div class="text-theme text-2xl sm:text-3xl font-medium text-center">
             Введите новый пароль!
           </div>
 
@@ -48,7 +48,7 @@
             <img src="/check_mark.svg" alt="" class="m-auto">
           </div>
 
-          <div class="text-theme text-2xl font-medium text-center pt-10">
+          <div class="text-theme text-xl sm:text-3xl font-medium text-center pt-10">
             Пароль был успешно обновлён!
           </div>
 

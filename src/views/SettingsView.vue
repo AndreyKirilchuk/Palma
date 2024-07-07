@@ -81,9 +81,9 @@
           О себе:
         </div>
         <div class="flex flex-col gap-5">
-          <textarea class="form_input w-1/2 h-64"></textarea>
+          <textarea class="form_input w-full xl:w-1/2 h-64"></textarea>
 
-          <div class="w-1/2">
+          <div class="w-full xl:w-1/2">
             <Button text="Сохранить" class="float-right"/>
           </div>
 
@@ -115,7 +115,7 @@
           Web-сайт:
         </div>
         <div class="flex gap-5 items-center">
-          <input type="text" class="form_input w-1/2 h-full">
+          <input type="text" class="form_input w-full sm:w-1/2 h-full">
           <Button text="Сохранить"/>
         </div>
       </div>
@@ -125,7 +125,7 @@
           Telegram:
         </div>
         <div class="flex gap-5 items-center">
-          <input type="text" class="form_input w-1/2 h-full">
+          <input type="text" class="form_input w-full sm:w-1/2 h-full">
           <Button text="Сохранить"/>
         </div>
       </div>
@@ -135,7 +135,7 @@
           Вконтакте:
         </div>
         <div class="flex gap-5 items-center">
-          <input type="text" class="form_input w-1/2 h-full">
+          <input type="text" class="form_input w-full sm:w-1/2 h-full">
           <Button text="Сохранить"/>
         </div>
       </div>
@@ -145,11 +145,11 @@
           Discord:
         </div>
         <div class="flex flex-col">
-          <div class="flex gap-5 items-center">
-            <input type="text" class="form_input w-1/2 h-full">
+          <div class="flex gap-5 items-center ">
+            <input type="text" class="form_input w-full sm:w-1/2 h-full">
             <Button text="Сохранить"/>
           </div>
-          <div class="mt-5 flex gap-9 text-theme items-center font-medium">
+          <div class="hidden md:flex mt-5 flex gap-9 text-theme items-center font-medium">
             <Button text="Сохранить"/>
 
             <RouterLink to="/logout" class="hover:text-primary transition duration-200">Выйти</RouterLink>
@@ -158,6 +158,16 @@
         </div>
 
       </div>
+
+      <div class="mobile_submit md:hidden">
+        <div class="flex flex-col sm:flex gap-9 text-theme sm:items-center font-medium">
+          <Button text="Сохранить"/>
+
+          <RouterLink to="/logout" class="hover:text-primary transition duration-200">Выйти</RouterLink>
+          <RouterLink to="/renamepass" class="hover:text-primary transition duration-200">Сбросить пароль</RouterLink>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -182,27 +192,48 @@
 
   .input_container{
     display: grid;
-    grid-template-columns: repeat(9,1fr);
-    padding: 25px 0px;
+    grid-template-columns: repeat(1,1fr);
+    padding: 25px 30px;
     font-size: 20px;
     gap: 20px;
     color: var(--var--textcolor);
-    font-size: 20px;
     font-weight: 500;
     border-bottom:1px solid var(--var--linecolor);
-    padding-left: 30px;
   }
 
   .input_container:last-child{
-    border-bottom: 0;
-  }
-  
-  .input_container div:last-child{
-    grid-column: span 8;
+    border-bottom:0;
   }
 
-  .input_container div:first-child{
-    float: right;
-    text-align: right;
+  @media(min-width:768px){
+    .input_container{
+      padding: 25px 15px;
+      grid-template-columns: repeat(5,1fr);
+    }
+    .input_container div:last-child{
+      grid-column: span 4;
+    }
+    .input_container div:first-child{
+      float: right;
+      text-align: right;
+    }
   }
+
+  @media (min-width: 1280px) {
+    .input_container{
+      grid-template-columns: repeat(8,1fr);
+    }
+    .input_container div:last-child{
+      grid-column: span 7;
+    }
+  }
+
+  .mobile_submit{
+    padding: 25px 30px;
+  }
+
+  button{
+    padding: 8px 12px;
+  }
+
 </style>

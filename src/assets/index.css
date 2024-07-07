@@ -110,7 +110,7 @@
 
     .container{
         max-width: 1700px;
-        padding: 0px 20px;
+        padding: 0px 15px;
         margin: 0 auto;
     }
 
@@ -192,7 +192,7 @@
 
     *{
         letter-spacing: 0.025rem;
-        word-break: break-all;
+        word-wrap: break-word;
         flex-wrap: wrap;
     }
 
@@ -211,7 +211,7 @@
     }
 
 @media (max-width: 480px) {
-    .form_input, .auth_input{
+    .auth_input{
         height: 40px;
     }
 }

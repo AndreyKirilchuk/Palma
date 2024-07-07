@@ -10,9 +10,9 @@
     <div class="container">
       <HeaderAbsolute />
 
-      <div class="flex justify-center py-52">
+      <div class="flex justify-center py-20 sm:py-52">
         <div class="form_container">
-          <div class="text-theme text-3xl font-medium text-center">
+          <div class="text-theme text-2xl sm:text-3xl font-medium text-center">
             Войдите в аккаунт!
           </div>
 
@@ -22,10 +22,10 @@
             <Button text="Войти" />
           </form>
 
-          <div class="py-2.5 w-full text-xl text-center">
+          <div class="py-2.5 w-full flex justify-center text-base sm:text-xl text-center">
             <div class="flex">
-              <span class="text-theme ml-10">Еще нет акаунта?</span>
-              <div class="relative ml-5">
+              <span class="text-theme">Еще нет акаунта?</span>
+              <div class="relative ml-2.5">
                 <RouterLink class="underline_anim text-primary  underline_anim" to="/signup">
                     Зарегистрироваться
                 </RouterLink>
